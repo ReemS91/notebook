@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Note</title>
+</head>
+<body>
+	<form action="/note/update/{{ note.id }}/" method="POST">
+		{% csrf_token %}
+		<input type="text" placeholder="Title" value="{{ note.title }}" name="title"><br><br>
+		<input type="text" placeholder="Body" value="{{ note.body }}" name="body">
+		<br><br><br>
+		<input type="submit" value="Save" />
+	</form>
+	<a href="/note/delete/{{ note.id }}/"><button>Delete</button></a>
+	<a href="/notebook/"><button>Cancel</button></a>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notebook</title>
+</head>
+<body>
+	<a href="/note/new/"><button>new note</button></a><br>
+	{% for note in notes %}
+		<a href='/note/{{ note.id }}/'>{{ note.title }}</a><br>
+	{% endfor %}
+</body>
+</html>
